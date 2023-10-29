@@ -131,8 +131,8 @@ $(document).ready(function(){
             <a class="btn" href="/profile" role="button" aria-expanded="false">
                 profile <i class="bi bi-person"></i>
             </a>&emsp;
-            <a class="btn" href="/profile" role="button" aria-expanded="false">
-              Cart <i class="fa fa-cart-shopping"></i> <span class="badge badge-danger">{{ count((array) session('cart')) }}</span>
+            <a class="btn" href="/cart_list" role="button">
+              Cart <i class="fa fa-cart-shopping"></i> </span>
           </a>&emsp;
             <form id="form" role="search"  action="{{ url('/search') }}">
                 <input type="search" id="input" name="search" placeholder="Search..."
@@ -228,8 +228,13 @@ $(document).ready(function(){
                         <h5 class="card-title">{{ $product->Product_Name }}</h5>
                         <p class="card-text">RS: {{ $product->Price }}</p>
                         
-                          <input type="number" value="1" min="1" name="quantity" id="selectOptions" class="form-control" style="width: 100px"> <br>
-                          <button onclick="cart()" class="btn btn-danger w-100">Add To Cart</button>
+                          Quantity:<select name="" id="selectOptions">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                          </select><br><br>
+                          <button onclick="cart(<?php echo $product->id; ?>)" class="btn btn-danger w-100">Add To Cart</button>
 
                         <br><br>
                         <a href="#" class="btn btn-success" style="width: 100%">Buy</a>
@@ -343,8 +348,8 @@ $(document).ready(function(){
 
 </html>
 <script>
-  function cart() {
+  function cart(id) {
   var x = document.getElementById('selectOptions').value;
-  window.location.href = 'http://127.0.0.1:8000/add_to_cart/{{ $product['id'] }}/' + x;
+  window.location.href = 'http://127.0.0.1:8000/add_to_cart/'+id+'/' + x;
 }
 </script>

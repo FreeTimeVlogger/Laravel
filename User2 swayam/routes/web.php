@@ -389,7 +389,12 @@ Route::get('login_check', [FormController::class, 'login_check']);
 
 //Admin routes
 
-Route::get('/addcart/{id}',[cart_controller::class,'cart']);
+Route::get('add_to_cart/{id}/{qt}',[cart_controller::class, 'cart']);
+Route::get('cart_list',[cart_controller::class, 'cart_list']);
+Route::get('remove/{id}',[cart_controller::class, 'remove_from_cart']);
+Route::get('place_cart_order',[cart_controller::class, 'place_cart_order']);
+
+
 
 //search
 Route::get('/search',[FormController::class,'search']);
