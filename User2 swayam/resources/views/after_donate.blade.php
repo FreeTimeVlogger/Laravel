@@ -267,6 +267,7 @@ $(document).ready(function(){
     </div>
 </header><!-- End Header -->
   <body>
+    <div style="background-color:#c6b2b2" class="container mt-4"><center style="font-size: 50px" >Donation Details </div></center>
   <div class="container mt-4">
 @if(session('status1'))
 <div class="alert alert-success">

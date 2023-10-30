@@ -6,126 +6,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta content="" name="description">
-        <meta content="" name="keywords">
-    
-        <!-- Favicons -->
-        <!-- <link href="assets/img/logo_bg.png" rel="icon"> -->
-        <!-- <link href="assets/img/logo_bg.png" rel="apple-touch-icon"> -->
-    
-        <!-- Google Fonts -->
-        <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-            rel="stylesheet">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-        <!-- Vendor CSS Files -->
-    
-        <link href="{{ asset('vendor/animate.css/animate.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-        <link href="{{ asset('vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-    
-    
-    
-        <link href="{{ asset('js/main.js') }}" rel="stylesheet">
-    
-        <!-- Template Main CSS File -->
-    
-    
-    
-        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    
-    
-        <script src="jQuery-3.6.3.min.js"></script>
-    
-        <script>
-            $(document).ready(function() {
-                $("#swayam").click(function() {
-                    $("p").slideToggle("slow");
-                });
+    <!-- Favicons -->
+    <!-- <link href="assets/img/logo_bg.png" rel="icon"> -->
+    <!-- <link href="assets/img/logo_bg.png" rel="apple-touch-icon"> -->
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Vendor CSS Files -->
+
+    <link href="{{ asset('vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+
+
+    <link href="{{ asset('js/main.js') }}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+
+
+
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+
+    <script src="jQuery-3.6.3.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#swayam").click(function() {
+                $("p").slideToggle("slow");
             });
-    
-    
-    
-    
-    
-            $(document).ready(function() {
-                $("#highlights").click(function() {
-                    $("p").slideToggle("slow");
-                });
+        });
+
+
+
+
+
+        $(document).ready(function() {
+            $("#highlights").click(function() {
+                $("p").slideToggle("slow");
             });
-    
-    
-            $(document).ready(function() {
-                $("#hide").click(function() {
-                    $("p").hide();
-                });
-                $("#show").click(function() {
-                    $("p").show();
-                });
+        });
+
+
+        $(document).ready(function() {
+            $("#hide").click(function() {
+                $("p").hide();
             });
-        </script>
-    
-        </script>
+            $("#show").click(function() {
+                $("p").show();
+            });
+        });
+    </script>
+
+    </script>
 </head>
 
 <style>
-    .con{
+    .con {
         margin-top: 30px;
         width: 40%;
-        margin-left: 30%; 
-        background-color:rgba(210, 180, 140, 0.292);
-        
+        margin-left: 30%;
+        background-color: rgba(210, 180, 140, 0.292);
+
         padding: 15px;
         border-radius: 20px;
     }
-    .text{
+
+    .text {
         color: black;
     }
-    .logo{
+
+    .logo {
         color: #444444;
         font-weight: bold;
     }
-    body{
+
+    body {
         background-size: cover;
         color: white;
     }
 
 
     #form {
-            background-color: rgb(184, 177, 177);
-            width: 33%;
-            height: 75%;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
+        background-color: rgb(184, 177, 177);
+        width: 33%;
+        height: 75%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
-        #input {
-            all: unset;
-            font: 16px system-ui;
-            color: #fff;
-            height: 100%;
-            width: 100%;
-            padding: 6px 10px;
-        }
+    #input {
+        all: unset;
+        font: 16px system-ui;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+    }
 
-        ::placeholder {
-            color: #fff;
-            opacity: 0.7;
-        }
+    ::placeholder {
+        color: #fff;
+        opacity: 0.7;
+    }
 
-        #btn_1 {
-            background-color: gray;
-            display: flex;
-            border: none;
-        }
+    #btn_1 {
+        background-color: gray;
+        display: flex;
+        border: none;
+    }
 </style>
 
 <body>
@@ -135,7 +138,7 @@
     <section id="topbar" class="d-flex align-items-center" style="background-color: #545454;">
         <div class="container d-flex justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
-              
+
                 <a href="#" class="linkedin"><i class="bi bi-youtube fs-5"></i></i></a>&emsp;&emsp;
                 <a href="#" class="twitter"><i class="bi bi-twitter fs-6"></i></a> &emsp;&emsp;
                 <a href="#" class="facebook"><i class="bi bi-facebook fs-6"></i></a>&emsp;&emsp;
@@ -144,7 +147,7 @@
             <div class="d-none d-md-flex align-items-center">
                 <div class="dropdown text-secondary">
                 </div>
-               
+
                 <a class="btn" href="/contact" role="button" aria-expanded="false">
                     Contact
                 </a>
@@ -178,7 +181,7 @@
 
 
                     <li class="dropdown"><a href="/swayam"><span class="fw-bold fs-6">WHO WE ARE</span></a>
-                        <li class="dropdown"><a href="/after_product"><span class="fw-bold fs-6">PRODUCTS</span></a>
+                    <li class="dropdown"><a href="/after_product"><span class="fw-bold fs-6">PRODUCTS</span></a>
                         <!-- <ul style="background-color: aliceblue;">
             <li><a href="#">About The SWAYAMSEVAK</a></li>
               <li><a href="#">Our History & Archives </a></li>
@@ -193,7 +196,7 @@
                     </li>
 
                     {{-- <li class="dropdown"><a href="/promises"><span class="fw-bold fs-6">STORE</span></a> --}}
-                        <!-- <ul style="background-color: aliceblue;">
+                    <!-- <ul style="background-color: aliceblue;">
               <li><a href="promises.html">Adhyayan</a></li>
               <li><a href="promises.html">Jagran</a></li>
             </ul> -->
@@ -205,7 +208,7 @@
                 <li><a href="portfolio.html" class="fw-bold fs-6">OUR PROMISE</a></li>
                 -->
                     <li><a href="/programs" class="fw-bold fs-6">PROGRAMS</a></li>
-                    
+
                     <!--
           <li><a href="#" class="fw-bold fs-6">VOLUNTEER</a></li>
           -->
@@ -221,33 +224,37 @@
         </div>
     </header><!-- End Header -->
 
-<div class="con">
-    <center><h1 style="color: black" >Delivery Address</h1></center>
+    <div class="con">
+        <center>
+            <h1 style="color: black">Delivery Address</h1>
+        </center>
 
-    <form method="POST" action="buy">
-        @csrf
+        <form method="POST" action="buy">
+            @csrf
 
-        <div class="form-group">
-            <label class="text">Address</label>
-            <input type="text" class="form-control" name="address" placeholder="Rku,Taramba">
-            <small style="color: red">
-                @error('address')
-                    {{ $message }}
-                @enderror
-            </small>
-        </div>
+            <div class="form-group">
+                <label class="text">Address</label>
+                {{-- <input type="text" class="form-control" name="address" placeholder="Rku,Taramba" onblur="click()"> --}}
+                <input type="text" class="form-control" name="address" placeholder="Rku, Taramba"
+                    onblur="handleBlur()">
 
-        <div class="form-group ">
-            <label class="text">Street</label>
-            <input type="text" class="form-control" name="street"
-                placeholder="street name">
+                <small style="color: red">
+                    @error('address')
+                        {{ $message }}
+                    @enderror
+                </small>
+            </div>
+
+            <div class="form-group ">
+                <label class="text">Street</label>
+                <input type="text" class="form-control" name="street" placeholder="street name">
                 <small style="color: red">
                     @error('street')
                         {{ $message }}
                     @enderror
                 </small>
-        </div>
-        {{-- <div class="form-row"> --}}
+            </div>
+            {{-- <div class="form-row"> --}}
             <div class="form-group ">
                 <label class="text">Post code</label>
                 <input type="number" class="form-control" name="pin" placeholder="123456">
@@ -285,14 +292,18 @@
                 </select>
             </div>
 
+            <input type="text" name="Product_id" id="Product_id" value="">
+
+            <p id="Product_id"></p>
             <center>
-                <button type="submit" name="submit" class="btn btn-primary" style="width: 200px">Place Order</button>
+                <button type="submit" name="submit" class="btn btn-primary" style="width: 200px">Place
+                    Order</button>
             </center>
 
-            
-    </form>
-</div>
-<br>
+
+        </form>
+    </div>
+    <br>
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
@@ -373,3 +384,17 @@
 </body>
 
 </html>
+
+<script>
+    function handleBlur() {
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var url = window.location.href;
+            var parts = url.split('/');
+            var id = parts[parts.length - 1];
+
+            // document.getElementById("Product_id").innerHTML = "Hello";
+            alert(id);
+        });
+    }
+</script>

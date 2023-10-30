@@ -171,12 +171,7 @@
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-
-        <ol>
-          <li><a href="/contact">Home</a></li>
-          <li>Contact</li>
-        </ol>
-        <h2>Contact</h2>
+        <center><h2>Ask for Help</h2></center>
 
       </div>
     </section><!-- End Breadcrumbs -->
