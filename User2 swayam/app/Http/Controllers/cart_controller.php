@@ -37,12 +37,26 @@ class cart_controller extends Controller
         $cart = cart::where('User_id', $User_id)->get();
         $Product_id = [];
         foreach ($cart as $cart1) {
-            $Product_id[] = $cart1['id'];
+            $Product_id[] = $cart1['Product_ID'];
         }
 
         $product_detail = Product::whereIn('id', $Product_id)->get();
         return view('cart_list', compact('cart', 'product_detail'));
+
     }
+    // public function fetchstore()
+    // {
+    //     $User_id = session('id');
+    //     $cart = cart::where('User_id', $User_id)->get();
+    //     $Product_id = [];
+    //     foreach ($cart as $cart1) {
+    //         $Product_id[] = $cart1['id'];
+    //     }
+
+    //     $product_detail = Product::whereIn('id', $Product_id)->get();
+    //     return view('Admin/cart', compact('cart', 'product_detail'));
+
+    // }
     public function remove_from_cart($id)
     {
         $check = cart::where('id', $id)->delete();

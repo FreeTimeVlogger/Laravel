@@ -5,7 +5,7 @@
 <table style="width: 100%" border="1">
    <tr>
     <th>ID</th>
-    <th>PRoduct_Id</th>
+    <th>Product_Id</th>
     <th>Product_Image</th>
     <th>Product_Name</th>
     <th>Quantity</th>
@@ -14,9 +14,12 @@
     <th colspan="2">Operator</th>
    </tr>
     <tr>
+        @foreach ($cart as $o)
+                        @foreach ($product_detail as $p)
+                            @if ($o['id'] == $p['id'])
         <td>1</td>
         <td>33322</td>
-        <td><img src="img/clients/juice.jpeg" alt="" height="100px" width="100px"> </td>
+        <td><img src="{{ URL::to('/') }}/products_image/{{ $p['Image'] }} alt="" height="100px" width="100px"> </td>
         <td>Healthy_Juice</td>
         <td>4</td>
         <td>Rs 150</td>
@@ -28,5 +31,8 @@
             <td><button type="button" class="btn btn-danger">Delete</button></td>
         </a>
        </tr>
+       @endif
+                        @endforeach
+                    @endforeach
 </table>
 @endsection

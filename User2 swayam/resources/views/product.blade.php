@@ -161,7 +161,7 @@ $(document).ready(function(){
 
 
                 <li class="dropdown"><a href="/swayam"><span class="fw-bold fs-6">WHO WE ARE</span></a>
-                  <li class="dropdown"><a href="/swayam"><span class="fw-bold fs-6">PRODUCTS</span></a>
+                  <li class="dropdown"><a href="/after_product"><span class="fw-bold fs-6">PRODUCTS</span></a>
                    
                     <!-- <ul style="background-color: aliceblue;">
         <li><a href="#">About The SWAYAMSEVAK</a></li>
@@ -237,7 +237,7 @@ $(document).ready(function(){
                           <button onclick="cart(<?php echo $product->id; ?>)" class="btn btn-danger w-100">Add To Cart</button>
 
                         <br><br>
-                        <a href="#" class="btn btn-success" style="width: 100%">Buy</a>
+                        <a href="buy/{{ $product->id }}" class="btn btn-success" style="width: 100%">Buy</a>
 
                       </div>
                     </div>

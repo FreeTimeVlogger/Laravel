@@ -200,7 +200,7 @@
 
 
                 <li class="dropdown"><a href="/swayam"><span class="fw-bold fs-6">WHO WE ARE</span></a>
-                  <li class="dropdown"><a href="/swayam"><span class="fw-bold fs-6">PRODUCTS</span></a>
+                  <li class="dropdown"><a href="/after_product"><span class="fw-bold fs-6">PRODUCTS</span></a>
                    
                     <!-- <ul style="background-color: aliceblue;">
         <li><a href="#">About The SWAYAMSEVAK</a></li>
@@ -245,12 +245,13 @@
     </div>
 </header>
 <div class="aahan"></div>
+<div class="aahan"></div>
         <div class="container-fluid mt-5 mb-5">
             <div class="d-flex justify-content-center row">
                 <div class="col-md-10">
                     @foreach ($cart as $o)
                         @foreach ($product_detail as $p)
-                            @if ($o['id'] == $p['id'])
+                            @if ($o['Product_ID'] == $p['id'])
                                 <div class="row p-2 bg-white border rounded">
                                     <div class="col-md-3 mt-1" style="text-align: center"><img class=" img-responsive rounded"
                                             height="175px" width="175px"

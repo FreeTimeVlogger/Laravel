@@ -60,14 +60,8 @@
 					<span class="text">Launch Program</span>
 				</a>
 			</li>
-            <li>
-				<a href="cart">
-					<i class='bx bxs-cart' ></i>
-					<span class="text"> Cart</span>
-				</a>
-			</li>
 			<li>
-				<a href="cart">
+				<a href="#">
 					<i class='bx bxs-store' ></i>
 					<span class="text">Orders</span>
 				</a>

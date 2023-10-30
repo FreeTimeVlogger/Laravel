@@ -127,6 +127,12 @@ Route::middleware('user')->group(function () {
         ]);
     });
 
+    Route::get('buy/{id}', function () {
+        return view('buy');
+    });
+
+    Route::post('buy', [FormController::class, 'orders']);
+
     Route::get('/contact', function () {
         return view('contact');
     });
@@ -444,11 +450,13 @@ Route::get('admin', function () {
 Route::get('user',[FormController::class,'user_store']);
 Route::get('donate',[MoneyController::class,'fetch_store']);
 Route::get('store',[FormController::class,'fetch_store']);
-Route::get('launch',[ProgramController::class,'fetch_store']); //Admin/store
+Route::get('launch',[ProgramController::class,'fetch_store']);
+Route::get('cart',[cart_controller::class,'fetchstore']); //Admin/store
+ //Admin/store
  //Admin/store
 // Route::get('edit_product',[FormController::class,'show']);
 Route::view('help','Admin/help');
-Route::view('cart','Admin/cart');
+// Route::view('cart','Admin/cart');
 // Route::view('launch','Admin/launch');
 // Route::get('demo',[FormController::class,'admin_store2']);
 

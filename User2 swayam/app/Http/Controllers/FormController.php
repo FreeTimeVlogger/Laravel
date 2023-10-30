@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Employee;
 use App\Models\Make;
-use App\Models\User;
+use App\Models\order;
 use App\Models\product;
 use App\Models\contact_message;
 use Illuminate\Support\Facades\Mail;
@@ -99,14 +99,10 @@ class FormController extends Controller
             'email' => 'required|unique:make',
             'password' => 'required',
             'confirm_password' => 'required|same:password',
-            // 'age' => 'required',
             'mobile' => 'required',
             // 'file' => 'required|max:2048',
 
         ]);
-        // $file = time() . '.' . $req->file->extension();
-        // $req->file->move(public_path('users_image'), $file)
-        // ;
 
         $make = Make::create([
             // 'file' => $req->input('file'),
@@ -243,6 +239,38 @@ class FormController extends Controller
 
 
 
+    public function orders(request $req)
+    {
+        $req->validate([
+
+            'address' => 'required',
+            'street' => 'required',
+            'pin' => 'required',
+            'mobile' => 'required|digits:10',
+            'city' => 'required',
+        ]);
+
+        $orders = order::create([
+            'address' => $req->input('address'),
+            'street' =>  $req->input('street'),
+            'postcode' => $req->input('pin'),
+            'mobile' => $req->input('mobile'),
+            'city' => $req->city,
+            'payment' => $req->payment,
+        ]);
+
+        $orders->save();
+
+
+
+        return redirect('/after_product');
+    }
+
+
+
+  
+
+
     public function profile_validate(request $req)
     {
         $req->validate([
@@ -292,6 +320,10 @@ class FormController extends Controller
         session::flush();
         return redirect('/');
     }
+
+
+
+
 
 
 
