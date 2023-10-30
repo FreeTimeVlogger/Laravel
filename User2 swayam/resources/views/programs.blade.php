@@ -194,7 +194,7 @@
 
 
         </div>
-    </header><!-- End Header -->
+    </header>
     <div class="logo">
         <center>
             <h1> Launch Programs</h1>
