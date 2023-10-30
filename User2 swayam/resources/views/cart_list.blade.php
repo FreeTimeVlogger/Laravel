@@ -269,13 +269,6 @@
                                                 {{ $o['Price'] }}</span></div>
                                         <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span>Quantity:
                                                 {{ $o['Quantity'] }} </span></div>
-                                        
-                                        {{-- <p class="text-justify text-truncate para mb-0">There are many variations of
-                                            passages of Lorem
-                                            Ipsum
-                                            available, but the majority have suffered alteration in some form, by injected
-                                            humour, or
-                                            randomised words which don't look even slightly believable.<br><br></p> --}}
                                     </div>
                                     <div class="align-items-center align-content-center col-md-3 border-left mt-1">
                                         <div style="color: red"><b><h4>Final Price</h4></b></div>

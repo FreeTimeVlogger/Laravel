@@ -135,7 +135,7 @@ $(document).ready(function(){
               Cart <i class="fa fa-cart-shopping"></i> </span>
           </a>&emsp;
             <form id="form" role="search"  action="{{ url('/search') }}">
-                <input type="search" id="input" name="search" placeholder="Search..."
+                <input type="search" id="input" name="search_term" placeholder="Search..."
                     aria-label="Search through site content">
                 <button id="btn_1"><i class="bi bi-search"></i></button>
             </form>
@@ -350,6 +350,6 @@ $(document).ready(function(){
 <script>
   function cart(id) {
   var x = document.getElementById('selectOptions').value;
-  window.location.href = 'http://127.0.0.1:8000/add_to_cart/'+id+'/' + x;
+  window.location.href = 'http://127.0.0.1:8000/add_to_cart/'+ id +'/' + x;
 }
 </script>

@@ -7,7 +7,7 @@
     <th>Id</th>
     <th>Name</th>
     <th>Amount</th>
-    <th>Message</th>
+    <th>Help</th>
     <th colspan="2">Operator</th>
    </tr>
     <tr>

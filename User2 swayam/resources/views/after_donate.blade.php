@@ -128,6 +128,47 @@ $(document).ready(function(){
 </head>
 
 <body>
+  <style>
+    <>body {
+        background: #eee
+    }
+
+    .ratings i {
+        font-size: 16px;
+        color: red
+    }
+
+    .strike-text {
+        color: red;
+        text-decoration: line-through
+    }
+
+
+
+    .dot {
+        height: 7px;
+        width: 7px;
+        margin-left: 6px;
+        margin-right: 6px;
+        margin-top: 3px;
+        background-color: blue;
+        border-radius: 50%;
+        display: inline-block
+    }
+
+    .spec-1 {
+        color: #938787;
+        font-size: 15px
+    }
+
+    h5 {
+        font-weight: 400
+    }
+
+    .para {
+        font-size: 16px
+    }
+</style>
   <div class="container mt-4">
     @if ($message = Session::get('success'))
     <div class="alert alert-success alert-dismissible">
@@ -237,16 +278,19 @@ $(document).ready(function(){
   <div class="row ml-2">
     @if ($donates != null) 
               @foreach ($donates as $donate)
-              <div class="col-xl-3 col-md-4 col-sm-6 mt-2 mb-2 " style="width: 18rem;">
-                {{-- <img src="products_image/{{ $product->Image}}" class="card-img-top ml-2" style="height: 200px " alt="..."> --}}
-                <div class="card-body">
-                  <h5 class="card-title">{{ $donate->name }}</h5>
-                  <p class="card-text">RS: {{ $donate->amount }}</p>
-                  <p class="card-text">RS: {{ $donate->message }}</p>
-        
-
+              <div class="col-md-4 col-sm-6 mb-3 mb-sm-0">
+                <h5>{{ $donate->name }}</h5>
+                <div class="d-flex flex-row">
+                    <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </div>
+                    {{-- <span>Each {{ $o['Price'] }}</span> --}}
                 </div>
-              </div>
+                <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span>RS:
+                        {{ $donate->amount }}</span></div>
+                <div class="mt-1 mb-1 spec-1"><span class="dot"></span><span>
+                        {{ $donate->message }} </span></div>
+            </div>
     @endforeach
     @endif
   </div>

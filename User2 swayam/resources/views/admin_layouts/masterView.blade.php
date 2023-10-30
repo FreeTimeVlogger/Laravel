@@ -68,12 +68,7 @@
 			</li>
 		</ul>
 		<ul class="side-menu">
-			<li>
-				<a href="#">
-					<i class='bx bxs-cog' ></i>
-					<span class="text">Setting</span>
-				</a>
-			</li>
+			
 			<li>
 				<a href="admin_logout" class="logout">
 					<i class='bx bxs-log-out-circle' ></i>

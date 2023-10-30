@@ -199,9 +199,9 @@
               
                     </li>
 
-                    <li class="dropdown"><a href="before_store"><span class="fw-bold fs-6">STORE</span></a>
+                    {{-- <li class="dropdown"><a href="before_store"><span class="fw-bold fs-6">STORE</span></a>
               
-                    </li>
+                    </li> --}}
 
                     <li class="dropdown"><a href="before_what_we_do"><span class="fw-bold fs-6">WHAT WE DO</span></a>
                        

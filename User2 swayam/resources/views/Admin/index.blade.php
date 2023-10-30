@@ -178,6 +178,33 @@
                     <a href="store"><button class="btn btn-info">View Store</button></a>
 				</div>
 			</div>
+            <div class="col-sm-4">
+				<div class="box"  style="background-color:rgb(241, 215, 215);">
+					<div class="contain">
+						<p>Ask For Help</p> <br>
+						{{-- <p> 2</p> --}}
+					</div>
+					<a href="help"><button class="btn btn-info">View Help</button></a>
+				</div>
+			</div>
+            <div class="col-sm-4">
+				<div class="box"  style="background-color:rgb(245, 171, 171);">
+					<div class="contain">
+						<p>Program</p> <br>
+						{{-- <p> 2</p> --}}
+					</div>
+					<a href="launch"><button class="btn btn-info">View Program</button></a>
+				</div>
+			</div>
+            <div class="col-sm-4">
+				<div class="box"  style="background-color:rgb(244, 133, 133);">
+					<div class="contain">
+						<p>Orders</p> <br>
+						{{-- <p> 2</p> --}}
+					</div>
+					<a href="#"><button class="btn btn-info">View Orders</button></a>
+				</div>
+			</div>
         </div>
         </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -460,6 +460,15 @@ class FormController extends Controller
         $data=compact('products','search');
         return view('Admin/store')->with($data);
     }
+    public function search( Request $request ) 
+    {
+        $searchTerm = $request->input('search_term');
+    
+    $products = Product::where('Product_Name', 'like', '%' . $searchTerm . '%'); // 10 results per page
+    // dd($products);
+
+    return view('product', compact('products'));
+    }
 
     public function show($id)
     {
