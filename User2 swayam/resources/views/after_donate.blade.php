@@ -198,11 +198,11 @@ $(document).ready(function(){
             <a class="btn" href="/profile" role="button" aria-expanded="false">
                 profile <i class="bi bi-person"></i>
             </a>&emsp;
-            <form id="form" role="search">
+            {{-- <form id="form" role="search">
                 <input type="search" id="input" name="q" placeholder="Search..."
                     aria-label="Search through site content">
                 <button id="btn_1"><i class="bi bi-search"></i></button>
-            </form>
+            </form> --}}
         </div>
     </div>
 </section>
