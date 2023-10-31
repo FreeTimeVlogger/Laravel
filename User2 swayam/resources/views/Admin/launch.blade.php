@@ -8,21 +8,21 @@
     <th>Image</th>
     <th>Program_Name</th>
     <th>Program_Topic</th>
-    <th colspan="2">Operator</th>
+    {{-- <th colspan="2">Operator</th> --}}
    </tr>
    <tr>
     @foreach ($aahan as $antima)
     <td><img src="programs_image/{{ $antima['Image']}}" alt="" height="100px" width="100px"> </td>
     <td>  {{ $antima['program_name'] }}</td>
     <td> {{ $antima['program_topic']}} </td>
-    <td>
+    {{-- <td>
     <a href="">
         <button type="button" class="btn btn-success">Edit</button>
     </a>
     <a href="">
         <button type="button" class="btn btn-danger">Delete</button>
     </a>
-    </td>
+    </td> --}}
 
   
 
