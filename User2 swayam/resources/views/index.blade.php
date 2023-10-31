@@ -117,6 +117,10 @@
             <div class="d-none d-md-flex align-items-center">
                 <div class="dropdown text-secondary">
                 </div>
+
+                <a class="btn" href="/ask_help" role="button" aria-expanded="false">
+                    Ask For Help
+                </a>
                
                 <a class="btn" href="/contact" role="button" aria-expanded="false">
                     Contact

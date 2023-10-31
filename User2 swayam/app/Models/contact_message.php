@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class contact_message extends Model
 {
     use HasFactory;
+    public $timestamps = false;
+    public $table='contact_messages';
+
+    protected $fillable = [
+        'name','email','subject', 'message',
+    ];
 }

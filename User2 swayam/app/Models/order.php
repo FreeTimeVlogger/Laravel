@@ -13,6 +13,6 @@ class order extends Model
 
        
     protected $fillable = [
-        'address', 'street', 'pin', 'mobile', 'city', 'payment',
+        'user_id','Product_id','address', 'street', 'postcode', 'mobile', 'city', 'payment',
     ];
 }

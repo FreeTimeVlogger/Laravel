@@ -2,12 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
-
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -107,17 +101,13 @@
         }
     </style>
 
-
 </head>
-
 <body>
-
-
-    <!-- ======= Top Bar ======= -->
-    <section id="topbar" class="d-flex align-items-center" style="background-color: #545454;">
+     <!-- ======= Top Bar ======= -->
+     <section id="topbar" class="d-flex align-items-center" style="background-color: #545454;">
         <div class="container d-flex justify-content-center justify-content-md-between">
             <div class="contact-info d-flex align-items-center">
-
+              
                 <a href="#" class="linkedin"><i class="bi bi-youtube fs-5"></i></i></a>&emsp;&emsp;
                 <a href="#" class="twitter"><i class="bi bi-twitter fs-6"></i></a> &emsp;&emsp;
                 <a href="#" class="facebook"><i class="bi bi-facebook fs-6"></i></a>&emsp;&emsp;
@@ -130,18 +120,18 @@
                 <a class="btn" href="/ask_help" role="button" aria-expanded="false">
                     Ask For Help
                 </a>
-
+               
                 <a class="btn" href="/contact" role="button" aria-expanded="false">
                     Contact
                 </a>
                 <a class="btn" href="/profile" role="button" aria-expanded="false">
                     profile <i class="bi bi-person"></i>
                 </a>&emsp;
-                <form id="form" role="search">
+                {{-- <form id="form" role="search">
                     <input type="search" id="input" name="q" placeholder="Search..."
                         aria-label="Search through site content">
                     <button id="btn_1"><i class="bi bi-search"></i></button>
-                </form>
+                </form> --}}
             </div>
         </div>
     </section>
@@ -164,36 +154,38 @@
 
 
                     <li class="dropdown"><a href="/swayam"><span class="fw-bold fs-6">WHO WE ARE</span></a>
+                        <li class="dropdown"><a href="/after_product"><span class="fw-bold fs-6">PRODUCTS</span></a>
                         <!-- <ul style="background-color: aliceblue;">
-          <li><a href="#">About The SWAYAMSEVAK</a></li>
-            <li><a href="#">Our History & Archives </a></li>
-          </ul> -->
+            <li><a href="#">About The SWAYAMSEVAK</a></li>
+              <li><a href="#">Our History & Archives </a></li>
+            </ul> -->
                     </li>
 
                     <li class="dropdown"><a href="/what_we_do"><span class="fw-bold fs-6">WHAT WE DO</span></a>
                         <!-- <ul style="background-color: aliceblue;">
-          <li><a href="what_we_do.html#education">Access to Education</a></li>
-            <li><a href="what_we_do.html#education">National Society Development</a></li>
-          </ul> -->
+            <li><a href="what_we_do.html#education">Access to Education</a></li>
+              <li><a href="what_we_do.html#education">National Society Development</a></li>
+            </ul> -->
                     </li>
 
                     {{-- <li class="dropdown"><a href="/promises"><span class="fw-bold fs-6">STORE</span></a> --}}
-                    <!-- <ul style="background-color: aliceblue;">
-            <li><a href="promises.html">Adhyayan</a></li>
-            <li><a href="promises.html">Jagran</a></li>
-          </ul> -->
+                        <!-- <ul style="background-color: aliceblue;">
+              <li><a href="promises.html">Adhyayan</a></li>
+              <li><a href="promises.html">Jagran</a></li>
+            </ul> -->
                     </li>
 
                     <!--
-              <li><a href="about.html" class="fw-bold fs-6">WHO WE ARE</a></li>
-              <li><a href="services.html" class="fw-bold fs-6">WHAT WE DO</a></li>
-              <li><a href="portfolio.html" class="fw-bold fs-6">OUR PROMISE</a></li>
-              -->
+                <li><a href="about.html" class="fw-bold fs-6">WHO WE ARE</a></li>
+                <li><a href="services.html" class="fw-bold fs-6">WHAT WE DO</a></li>
+                <li><a href="portfolio.html" class="fw-bold fs-6">OUR PROMISE</a></li>
+                -->
                     <li><a href="/programs" class="fw-bold fs-6">PROGRAMS</a></li>
+                    
                     <!--
-        <li><a href="#" class="fw-bold fs-6">VOLUNTEER</a></li>
-        -->
-                    <li><a href="/donate"><button type="button" id="donate"
+          <li><a href="#" class="fw-bold fs-6">VOLUNTEER</a></li>
+          -->
+                    <li><a href="/after_donate"><button type="button" id="donate"
                                 class="btn btn-danger fw-bold fs-6">DONATE</button></a></li>
 
 
@@ -205,123 +197,126 @@
         </div>
     </header><!-- End Header -->
 
-    <form action="profile_check" method="post" enctype="multipart/form-data">
-        @csrf
+
+    <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
-            <div class="main-body">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex flex-column align-items-center text-center">
-                                    @foreach ($make as $hel)
-                                        <img src="{{ URL::to('/') }}/img/user/{{ $hel->profile_pic }}" alt="Admin"
-                                            class="rounded-circle p-1 bg-primary" width="110">
-                                        <div class="mt-3">
+            <center>
+                <h2>Ask for Help</h2>
+            </center>
 
-                                            <h4>{{ $hel->name }}</h4>
-                                        </div>
-                                </div>
-                                <hr class="my-4">
+        </div>
+    </section><!-- End Breadcrumbs -->
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row mb-3">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Full Name</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary">
-                                        <input type="text" class="form-control" value=" {{ $hel->name }}"
-                                            name="name">
-                                        <small style="color: red">
-                                            @error('name')
-                                                {{ $message }}
-                                            @enderror
-                                        </small>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Email</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary">
-                                        <input type="text" class="form-control" value="{{ $hel->email }}" readonly
-                                            name="email">
-                                        <small style="color: red">
-                                            @error('email')
-                                                {{ $message }}
-                                            @enderror
-                                        </small>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Phone</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary">
-                                        <input type="text" class="form-control" value="{{ $hel->number }}"
-                                            name="phone">
-                                        <small style="color: red">
-                                            @error('phone')
-                                                {{ $message }}
-                                            @enderror
-                                        </small>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Age</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary">
-                                        <input type="text" class="form-control" value="{{ $hel->Age }}"
-                                            name="age">
-                                        <small style="color: red">
-                                            @error('age')
-                                                {{ $message }}
-                                            @enderror
-                                        </small>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <div class="col-sm-3">
-                                        <h6 class="mb-0">Profile_pic</h6>
-                                    </div>
-                                    <div class="col-sm-9 text-secondary">
-                                        <input type="file" class="form-control" name="profile_pic">
-                                        <small style="color: red">
-                                            @error('profile_pic')
-                                                {{ $message }}
-                                            @enderror
-                                        </small>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-3"></div>
-                                    <div class="col-sm-9 text-secondary">
-                                        {{-- <input  value=""> --}}
-                                        {{-- <button type="submit" class="btn btn-primary px-4">
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
 
-                                            Save Changes</button> --}}
-                                            <input type="submit" value="Save Changes"class="btn btn-primary px-4">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="info-box mb-4">
+                        <i class="bx bx-map"></i>
+                        <h3>Our Address</h3>
+                        <p>India ,gujarat</p>
                     </div>
                 </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-box  mb-4">
+                        <i class="bx bx-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>abhattarai446@rku.ac.in</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-box  mb-4">
+                        <i class="bx bx-phone-call"></i>
+                        <h3>Call Us</h3>
+                        <p>+91 9354586272</p>
+                    </div>
+                </div>
+
             </div>
+
+            {{-- <div class="row">
+
+                <div class="col-lg-6 ">
+                    <iframe class="mb-4 mb-lg-0"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                        frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+                </div> --}}
+<center>
+                <div class="col-lg-6">
+                    <form action="help" method="post" class="php-email-form">
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name"
+                                    placeholder="Your Name">
+                                <small style="color: red">
+                                    @error('name')
+                                        {{ $message }}
+                                    @enderror
+                                </small>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Your Email" >
+                                    <small style="color: red">
+                                        @error('email')
+                                            {{ $message }}
+                                        @enderror
+                                    </small>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <input type="number" class="form-control" name="mobile" 
+                                placeholder="Contact Number" >
+                                <small style="color: red">
+                                    @error('mobile')
+                                        {{ $message }}
+                                    @enderror
+                                </small>
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" name="subject" id="subject"
+                                placeholder="Subject" >
+                                <small style="color: red">
+                                    @error('subject')
+                                        {{ $message }}
+                                    @enderror
+                                </small>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="message" rows="5" placeholder="message"></textarea>
+                            <small style="color: red">
+                                @error('message')
+                                    {{ $message }}
+                                @enderror
+                            </small>
+                        </div>
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="text-center">
+                          <button type="submit">Ask Help</button></div>
+                    </form>
+                </div>
+
+            </div>
+
         </div>
-    </form>
+    </section><!-- End Contact Section -->
 
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
+</center>
+
+     <!-- ======= Footer ======= -->
+     <footer id="footer">
 
         <div class="footer-top">
             <div class="container">
@@ -395,6 +390,6 @@
             </div>
         </div>
     </footer><!-- End Footer -->
+    
 </body>
-
 </html>

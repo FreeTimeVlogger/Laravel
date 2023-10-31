@@ -124,6 +124,10 @@ $(document).ready(function(){
         <div class="d-none d-md-flex align-items-center">
             <div class="dropdown text-secondary">
             </div>
+
+            <a class="btn" href="/ask_help" role="button" aria-expanded="false">
+              Ask For Help
+          </a>
            
             <a class="btn" href="/contact" role="button" aria-expanded="false">
                 Contact
@@ -213,6 +217,13 @@ $(document).ready(function(){
         {{ session('success') }}
       </div>
       @endif
+
+      @if(session('Error'))
+      <div class="alert alert-warning">
+        {{ session('Error') }}
+      </div>
+      @endif
+
     </div>
     <!-- Uncomment below if you prefer to use an image logo -->
     <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -237,7 +248,7 @@ $(document).ready(function(){
                           <button onclick="cart(<?php echo $product->id; ?>)" class="btn btn-danger w-100">Add To Cart</button>
 
                         <br><br>
-                        <a href="buy/{{ $product->id }}" class="btn btn-success" style="width: 100%">Buy</a>
+                        <a href="buyy/{{ $product->id }}" class="btn btn-success" style="width: 100%">Buy</a>
 
                       </div>
                     </div>

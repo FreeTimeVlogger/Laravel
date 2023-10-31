@@ -148,6 +148,10 @@
                 <div class="dropdown text-secondary">
                 </div>
 
+                <a class="btn" href="/ask_help" role="button" aria-expanded="false">
+                    Ask For Help
+                </a>
+
                 <a class="btn" href="/contact" role="button" aria-expanded="false">
                     Contact
                 </a>
@@ -229,14 +233,25 @@
             <h1 style="color: black">Delivery Address</h1>
         </center>
 
-        <form method="POST" action="buy">
+        <form method="POST" action="{{ URL::to('/')}}/buy"> 
             @csrf
+
+            <div class="form-group">
+                <label class="text">Product Id</label>
+                {{-- <input type="text" class="form-control" name="address" placeholder="Rku,Taramba" onblur="click()"> --}}
+                <input type="text" class="form-control" name="product_id" placeholder="5" value="{{ $id }}" readonly>
+
+                <small style="color: red">
+                    @error('product_id')
+                        {{ $message }}
+                    @enderror
+                </small>
+            </div>
 
             <div class="form-group">
                 <label class="text">Address</label>
                 {{-- <input type="text" class="form-control" name="address" placeholder="Rku,Taramba" onblur="click()"> --}}
-                <input type="text" class="form-control" name="address" placeholder="Rku, Taramba"
-                    onblur="handleBlur()">
+                <input type="text" class="form-control" name="address" placeholder="Rku, Taramba">
 
                 <small style="color: red">
                     @error('address')
@@ -292,9 +307,6 @@
                 </select>
             </div>
 
-            <input type="text" name="Product_id" id="Product_id" value="">
-
-            <p id="Product_id"></p>
             <center>
                 <button type="submit" name="submit" class="btn btn-primary" style="width: 200px">Place
                     Order</button>
@@ -385,16 +397,4 @@
 
 </html>
 
-<script>
-    function handleBlur() {
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var url = window.location.href;
-            var parts = url.split('/');
-            var id = parts[parts.length - 1];
-
-            // document.getElementById("Product_id").innerHTML = "Hello";
-            alert(id);
-        });
-    }
-</script>

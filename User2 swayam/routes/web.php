@@ -127,15 +127,22 @@ Route::middleware('user')->group(function () {
         ]);
     });
 
-    Route::get('buy/{id}', function () {
-        return view('buy');
-    });
+    // Route::get('buy/{id}', function () {
+    //     return view('buy');
+    // });
+
+    Route::get('buyy/{id}', [FormController::class, 'buyyy']);
 
     Route::post('buy', [FormController::class, 'orders']);
+
+    Route::get('ask_help', function () {
+        return view('ask_help');
+    });
 
     Route::get('/contact', function () {
         return view('contact');
     });
+    Route::post('help', [FormController::class, 'ask_help']);
 
     Route::get('/after_donate', function () {
         $donates = DB::select("select * from donates");

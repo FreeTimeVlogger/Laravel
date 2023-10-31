@@ -119,6 +119,10 @@
                 <div class="dropdown text-secondary">
                 </div>
 
+                <a class="btn" href="/ask_help" role="button" aria-expanded="false">
+                    Ask For Help
+                </a>
+
                 <a class="btn" href="/contact" role="button" aria-expanded="false">
                     Contact
                 </a>

@@ -54,6 +54,33 @@ class FormController extends Controller
     //     $data =  Employee::all();
     //     return view('records', ['record' => $data]);
     // }
+
+
+    public function ask_help(Request $request)
+    {
+        $id = session('id');
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'email' => 'required|max:255',
+            'mobile'=> 'required|max:10',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+
+        $emp = new contact_message();
+        $emp->user_id=$id;
+        $emp->name = $request->name;
+        $emp->email = $request->email;
+        $emp->mobile = $request->mobile;
+        $emp->subject = $request->subject;
+        $emp->message = $request->message;
+        $emp->save();
+
+        return redirect('ask_help')->with('sent', 'You Help Requist Has been send');
+        
+    }
+
+
     public function contact_insert(Request $request)
     {
 
@@ -237,12 +264,15 @@ class FormController extends Controller
     }
 
 
-
+    public function buyyy($id){
+        return view('buy', ['id' => $id]);
+    }
 
     public function orders(request $req)
     {
+        $id = session('id');
         $req->validate([
-
+            'product_id'=>'required',
             'address' => 'required',
             'street' => 'required',
             'pin' => 'required',
@@ -251,6 +281,8 @@ class FormController extends Controller
         ]);
 
         $orders = order::create([
+            'Product_id'=>$req->product_id,
+            'user_id'=>$id,
             'address' => $req->input('address'),
             'street' =>  $req->input('street'),
             'postcode' => $req->input('pin'),
@@ -259,7 +291,13 @@ class FormController extends Controller
             'payment' => $req->payment,
         ]);
 
-        $orders->save();
+        if($orders->save()){
+            
+            session()->flash('success', 'Your Order have been Placed');
+        }
+        else{
+            session()->flash('Error', 'Something Went Wrong');
+        }
 
 
 
