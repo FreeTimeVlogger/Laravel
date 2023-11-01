@@ -299,7 +299,7 @@
                     </div>
                 @else
                     <div class="col-lg-6">
-                        <a href="place_cart_order"><button class="btn btn-primary w-100">Place Order</button></a>
+                        <a href="buyy/{{ $p->id }}"><button class="btn btn-primary w-100">Place Order</button></a>
                     </div>
                 @endif
 

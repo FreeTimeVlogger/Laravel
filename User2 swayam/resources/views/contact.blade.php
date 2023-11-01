@@ -220,7 +220,7 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <form action="contect_insert" method="post" role="form" class="php-email-form">
+                        <form action="contact_insert" method="post" role="form" class="php-email-form">
                             @csrf
                             <div class="row">
                                 <div class="col-md-6 form-group">

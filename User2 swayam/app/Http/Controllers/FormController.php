@@ -101,6 +101,10 @@ class FormController extends Controller
 
         return "Message sent";
     }
+    public function contact_store(){
+        $contacts=contact_message::all();
+        return view('Admin/help',compact('contacts'));
+       }
 
     public function delete($id)
     {
@@ -298,9 +302,6 @@ class FormController extends Controller
         else{
             session()->flash('Error', 'Something Went Wrong');
         }
-
-
-
         return redirect('/after_product');
     }
 
@@ -500,12 +501,16 @@ class FormController extends Controller
     }
     public function search( Request $request ) 
     {
-        $searchTerm = $request->input('search_term');
+       if ($request->search) {
+        $searchproducts = Product::where('Product_Name', 'like', '%' . $request->search . '%')->latest()->paginate(15); 
+        return view('aahan',compact('searchproducts'));
+       }
+       else {
+        return redirect()->back()->with('success','Nothing TO show');
+       }
     
-    $products = Product::where('Product_Name', 'like', '%' . $searchTerm . '%'); // 10 results per page
     // dd($products);
 
-    return view('product', compact('products'));
     }
 
     public function show($id)

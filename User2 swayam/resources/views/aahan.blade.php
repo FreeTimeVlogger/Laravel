@@ -105,9 +105,6 @@ $(document).ready(function(){
       display: flex;
       border: none;
     }
-    .aahan{
-      text-decoration: line-through;
-    }
   </style>
 
 </head>
@@ -142,7 +139,7 @@ $(document).ready(function(){
               Cart <i class="fa fa-cart-shopping"></i> </span>
           </a>&emsp;
             <form id="form" role="search"  action="{{ url('/search') }}">
-                <input type="search" id="input" name="search" value="{{ Request::get('search') }}" placeholder="Search..."
+                <input type="search" id="input" name="search" value="{{ Request::get('search') }} placeholder="Search..."
                     aria-label="Search through site content">
                 <button id="btn_1"><i class="bi bi-search"></i></button>
             </form>
@@ -213,7 +210,7 @@ $(document).ready(function(){
     </div>
 </header><!-- End Header -->
   <div class="logo">
-    <center><h1>PRODUCTS</h1></center>
+    <center><h1>SEARCH PRODUCTS</h1></center>
     <div class="container">
       @if(session('success'))
       <div class="alert alert-success">
@@ -234,23 +231,21 @@ $(document).ready(function(){
       <div class="card ml-2 " id="highlights">
         {{-- <h5 class="card-header">Highlights</h5> --}}
         <div class="row ml-2">
-          @if ($products != null) 
-                    @foreach ($products as $product)
+          @if ($searchproducts != null) 
+                    @foreach ($searchproducts as $product)
                     <div class="col-xl-3 col-md-4 col-sm-6 mt-2 mb-2 " style="width: 18rem;">
                       <img src="products_image/{{ $product->Image}}" class="card-img-top ml-2" style="height: 200px " alt="...">
                       <div class="card-body">
                         <h5 class="card-title">{{ $product->Product_Name }}</h5>
-                        <p class="aahan2">RS: <span class="aahan"> {{ $product->Discount_price }}</span>  </p>
                         <p class="card-text">RS: {{ $product->Price }}</p>
                         
-                        
-                          Quantity:<select name="x" id="selectOptions">
+                          Quantity:<select name="" id="selectOptions">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                           </select><br><br>
-                          <button onclick="cart(<?php echo $product->id; ?>)" class="btn btn-primary w-100">Add To Cart</button>
+                          <button onclick="cart(<?php echo $product->id; ?>)" class="btn btn-danger w-100">Add To Cart</button>
 
                         <br><br>
                         <a href="buyy/{{ $product->id }}" class="btn btn-success" style="width: 100%">Buy</a>

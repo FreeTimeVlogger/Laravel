@@ -100,7 +100,7 @@
 				<span class="num">8</span>
 			</a> --}}
 			<a href="admin_profile" class="profile">
-				{{-- <img src="img/people.png"> --}} Profile <i class="bi bi-person"></i>
+				 Profile <i class="bi bi-person"></i>
 			</a>
 		</nav>
 		<!-- NAVBAR -->

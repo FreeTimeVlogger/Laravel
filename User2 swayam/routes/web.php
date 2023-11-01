@@ -458,14 +458,9 @@ Route::get('user',[FormController::class,'user_store']);
 Route::get('donate',[MoneyController::class,'fetch_store']);
 Route::get('store',[FormController::class,'fetch_store']);
 Route::get('launch',[ProgramController::class,'fetch_store']);
-Route::get('cart',[cart_controller::class,'fetchstore']); //Admin/store
- //Admin/store
- //Admin/store
-// Route::get('edit_product',[FormController::class,'show']);
-Route::view('help','Admin/help');
-// Route::view('cart','Admin/cart');
-// Route::view('launch','Admin/launch');
-// Route::get('demo',[FormController::class,'admin_store2']);
+Route::get('help',[FormController::class,'contact_store']); 
+
+ 
 
 
 
@@ -478,7 +473,7 @@ Route::view('help','Admin/help');
 Route::view('donate3','donate_form');
 Route::view('product','Admin/add_product');
 Route::view('addprograms','Admin/Add_program');
-
+Route::view('addcontacts','Admin/Add_contact');
 Route::view('edit_product','Admin/Edit_product');
 Route::view('user_register','Admin/Add_user');
 Route::view('Edit_user','Admin/Edit_user');

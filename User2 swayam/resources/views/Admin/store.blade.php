@@ -1,12 +1,6 @@
 @extends('admin_layouts.masterView')
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 @section('body')
-<form action="" >
-    <div class="form-input">
-        <input type="search" name="search" placeholder="Search..." value="{{ $search }}">
-       <button class="btn btn-primary">Search</button>
-    </div>
-</form>
 <a href="product"><button type="button" class="btn btn-secondary">Add New Product</button> <br></a>
 <table style="width: 100%" border="1">
    <tr>
